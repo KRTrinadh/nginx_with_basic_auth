@@ -32,7 +32,7 @@ User: hello
 Pass: world
 
 
-push images to docker hub
+push images to docker hub :::
    docker tag harishsrs/nginx-with-ssl harishsrs/harishsrs/nginx-with-ssl
    docker push harishsrs/nginx-with-ssl
 
