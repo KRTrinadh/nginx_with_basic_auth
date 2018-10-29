@@ -1,0 +1,13 @@
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
+
+server {
+    listen              203.0.113.65:443 ssl;
+    listen              [2001:DB8::8]:443 ssl;
+    server_name         example2.com www.example2.com;
+    root                /var/www/example2.com;
+
+    ssl_certificate     /root/certs/example2.com/example.com.crt;
+    ssl_certificate_key /root/certs/example2.com/example.com.key;
+    }
+    
+    NOTE: link - https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-centos-7
